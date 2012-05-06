@@ -3,11 +3,11 @@ Rackspace-Cloud-Servers-API-Python-Script
 
 This script performs some simple actions on a cloud server using the Rackspace API v1.0 and v2.0
 
-=========================================
 
 v1.0/cloudserveractions.py
+-------------------------------------
 
-SYNOPSIS
+### SYNOPSIS
 
 cloudserveractions create|resize|rebuild|reboot|delete username apikey 
 
@@ -16,7 +16,7 @@ Optional
 [-d,--serverid] [-r,--reboottype]
 [-h,--help] [-v,--verbose] [--version]
 
-DESCRIPTION
+### DESCRIPTION
 
 This script does the following actions on an rackspace cloud server:
 Create Server
@@ -26,11 +26,17 @@ Reboot Server
 Delete Server
 
 
-EXAMPLES
+### EXAMPLES
 
-cloudserveractions create username 12312321312 --servername=test --imagename=imagename --flavorname=m1.tiny
+    >>python cloudserveractions.py create username 12312321312 --servername=test --imagename=imagename --flavorname=m1.tiny   
+    >>python cloudserveractions.py resize username 1231212312323423421312 --serverid=1234 --flavorname="512 server"  
+    >>python cloudserveractions.py reboot username 1231212312323423421312 --serverid=1234 --reboottype=hard
+    >>python cloudserveractions.py rebuild username 1231212312323423421312 --serverid=1234 --imagename='Ubuntu 11.10'
+    >>python cloudserveractions.py delete username 1231212312323423421312 --serverid=1234
+    >>python cloudserveractions.py list username 1231212312323423421312    
 
-EXIT STATUS
+
+### EXIT STATUS
 
 TODO: List exit codes
 
@@ -38,15 +44,15 @@ TODO: Script assumes server is active.
 If sever is not active or unavailable, 
 will return api error response and code
 
-AUTHOR
+### AUTHOR
 
 Juan Montemayor <jam1@alum.mit.edu>
 
-LICENSE
+### LICENSE
 
 This script is in the public domain, free from copyrights or restrictions.
 
-VERSION
+### VERSION
 
 1.0.1
 
