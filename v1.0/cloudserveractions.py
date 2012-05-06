@@ -2,7 +2,7 @@
 """
 SYNOPSIS
 
-cloudserveractions create|resize|rebuild|reboot|delete username apikey 
+cloudserveractions create|resize|rebuild|reboot|delete|list username apikey 
 
 Optional
 [-s,--servername] [-i, --imagename] [-f, --flavorname]
@@ -12,11 +12,12 @@ Optional
 DESCRIPTION
 
 This script does the following actions on an rackspace cloud server:
-Create Server
-Resize Server
-Rebuild Server
-Reboot Server
-Delete Server
+Create Server - Creates a new server if no params are entered will use defaults
+Resize Server - Resizes a server requires a server id
+Rebuild Server - Rebuilds a server requires a server id
+Reboot Server - Reboots a server requires a server id
+Delete Server - Deletes a server requires a server id
+List Servers - Lists all servers.  Usufull for getting server ids
 
 
 EXAMPLES
